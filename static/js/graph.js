@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.json, "/projects")
+    .defer(d3.json, "/donorsUS/projects")
     .await(makeGraphs);
 
 function makeGraphs(error, donorsUSProjects) {
@@ -36,9 +36,6 @@ function makeGraphs(error, donorsUSProjects) {
     var fundingStatus = ndx.dimension(function (d) {
         return d["funding_status"];
     });
-    var numberDoners = ndx.dimension(function (d) {
-        return d["number_doners"];
-    });
 
 
     //Calculate metrics
@@ -68,7 +65,6 @@ function makeGraphs(error, donorsUSProjects) {
     var numberProjectsND = dc.numberDisplay("#number-projects-nd");
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
     var fundingStatusChart = dc.pieChart("#funding-chart");
-    var numberDoners = dc.rowChart("number-doners-row-chart");
     var selectField = dc.selectMenu('#menu-select');
 
 
@@ -131,13 +127,6 @@ function makeGraphs(error, donorsUSProjects) {
         .dimension(fundingStatus)
         .group(numProjectsByFundingStatus);
 
-    numberDonersChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
-        .width(300)
-        .height(250)
-        .dimension(numberDonersDim)
-        .group(numProjectsByNumberDoners)
-        .xAxis().ticks(4);
 
     dc.renderAll();
 }
