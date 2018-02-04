@@ -15,7 +15,7 @@
 }
 
 #total-projects {
-   background: #33CC99;
+   background: rgb(0, 153, 204);
    width: 200px;
    position: relative;
    height: 60px;
@@ -28,7 +28,7 @@
 }
 
 #net-donations {
-   background: #33CC99;
+   background: rgb(0, 153, 204);
    width: 200px;
    position: relative;
    height: 60px;
@@ -42,7 +42,7 @@
 
 
 .dc-select-menu {
-   background: #33CC99;
+   background: rgb(0, 153, 204);
    width: 80%;
    border: none;
    position: relative;

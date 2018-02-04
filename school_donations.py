@@ -24,7 +24,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/donorsUS/projects")
+@app.route("/projects")
 def donor_projects():
     """
     A Flask view to serve the project data from
