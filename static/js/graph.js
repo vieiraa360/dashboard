@@ -30,6 +30,9 @@ function makeGraphs(error, donorsUSProjects) {
     var povertyLevelDim = ndx.dimension(function (d) {
         return d["poverty_level"];
     });
+    var numDonors = nxd.dimention(function (d) {
+        return d["num_donors"];
+    });
     var stateDim = ndx.dimension(function (d) {
         return d["school_state"];
     });
@@ -62,6 +65,7 @@ function makeGraphs(error, donorsUSProjects) {
     var timeChart = dc.lineChart("#time-chart");
     var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
     var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
+    var numDonorsChart = dc.rowChart("num-donors");
     var numberProjectsND = dc.numberDisplay("#number-projects-nd");
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
     var fundingStatusChart = dc.pieChart("#funding-chart");
@@ -126,6 +130,14 @@ function makeGraphs(error, donorsUSProjects) {
         .transitionDuration(1500)
         .dimension(fundingStatus)
         .group(numProjectsByFundingStatus);
+
+    numDonorsChart
+        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        .width(300)
+        .height(250)
+        .dimension(numDonorsDim)
+        .group(numProjectsByNumDonors)
+        .xAxis().ticks(4);
 
 
     dc.renderAll();
