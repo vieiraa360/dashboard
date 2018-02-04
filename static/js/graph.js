@@ -45,6 +45,7 @@ function makeGraphs(error, donorsUSProjects) {
     var numProjectsByDate = dateDim.group();
     var numProjectsByResourceType = resourceTypeDim.group();
     var numProjectsByPovertyLevel = povertyLevelDim.group();
+    var numProjectsByNumDonors = numDonorsDim.group();
     var numProjectsByFundingStatus = fundingStatus.group();
     var totalDonationsByState = stateDim.group().reduceSum(function (d) {
         return d["total_donations"];
@@ -65,7 +66,7 @@ function makeGraphs(error, donorsUSProjects) {
     var timeChart = dc.lineChart("#time-chart");
     var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
     var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
-    var numDonorsChart = dc.rowChart("num-donors");
+    var numDonorsChart = dc.rowChart("#num-donors");
     var numberProjectsND = dc.numberDisplay("#number-projects-nd");
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
     var fundingStatusChart = dc.pieChart("#funding-chart");
