@@ -1,1 +1,1 @@
-web: gunicorn donations_Nebraska:app
+web: gunicorn school_donations:app
