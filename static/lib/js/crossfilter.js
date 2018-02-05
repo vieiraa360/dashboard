@@ -1,5 +1,5 @@
 (function(exports){
-crossfilter.version = "1.3.12";
+crossfilter.version = "1.3.5";
 function crossfilter_identity(d) {
   return d;
 }
@@ -439,8 +439,8 @@ var quicksort_sizeThreshold = 32;
 var crossfilter_array8 = crossfilter_arrayUntyped,
     crossfilter_array16 = crossfilter_arrayUntyped,
     crossfilter_array32 = crossfilter_arrayUntyped,
-    crossfilter_arrayLengthen = crossfilter_arrayLengthenUntyped,
-    crossfilter_arrayWiden = crossfilter_arrayWidenUntyped;
+    crossfilter_arrayLengthen = crossfilter_identity,
+    crossfilter_arrayWiden = crossfilter_identity;
 
 if (typeof Uint8Array !== "undefined") {
   crossfilter_array8 = function(n) { return new Uint8Array(n); };
@@ -467,20 +467,7 @@ if (typeof Uint8Array !== "undefined") {
 }
 
 function crossfilter_arrayUntyped(n) {
-  var array = new Array(n), i = -1;
-  while (++i < n) array[i] = 0;
-  return array;
-}
-
-function crossfilter_arrayLengthenUntyped(array, length) {
-  var n = array.length;
-  while (n < length) array[n++] = 0;
-  return array;
-}
-
-function crossfilter_arrayWidenUntyped(array, width) {
-  if (width > 32) throw new Error("invalid array width!");
-  return array;
+  return new Array(n);
 }
 function crossfilter_filterExact(bisect, value) {
   return function(values) {
@@ -631,7 +618,7 @@ function crossfilter() {
     // Incorporate any existing data into this dimension, and make sure that the
     // filter bitset is wide enough to handle the new dimension.
     m |= one;
-    if (M >= 32 ? !one : m & -(1 << M)) {
+    if (M >= 32 ? !one : m & (1 << M) - 1) {
       filters = crossfilter_arrayWiden(filters, M <<= 1);
     }
     preAdd(data, 0, n);
@@ -825,7 +812,7 @@ function crossfilter() {
           removed = [];
 
       for (i = 0; i < n; ++i) {
-        if (!(filters[k = index[i]] & one) ^ !!(x = f(values[i], i))) {
+        if (!(filters[k = index[i]] & one) ^ (x = f(values[i], i))) {
           if (x) filters[k] &= zero, added.push(k);
           else filters[k] |= one, removed.push(k);
         }
@@ -898,8 +885,7 @@ function crossfilter() {
           reduceInitial,
           update = crossfilter_null,
           reset = crossfilter_null,
-          resetNeeded = true,
-          groupAll = key === crossfilter_null;
+          resetNeeded = true;
 
       if (arguments.length < 1) key = crossfilter_identity;
 
@@ -1000,10 +986,6 @@ function crossfilter() {
           update = updateMany;
           reset = resetMany;
         } else {
-          if (!k && groupAll) {
-            k = 1;
-            groups = [{key: null, value: initial()}];
-          }
           if (k === 1) {
             update = updateOne;
             reset = resetOne;
@@ -1063,7 +1045,6 @@ function crossfilter() {
               : k === 1 ? (reset = resetOne, update = updateOne)
               : reset = update = crossfilter_null;
         } else if (k === 1) {
-          if (groupAll) return;
           for (var i = 0; i < n; ++i) if (filters[i]) return;
           groups = [], k = 0;
           filterListeners[filterListeners.indexOf(update)] =
@@ -1245,8 +1226,9 @@ function crossfilter() {
       if (i >= 0) dataListeners.splice(i, 1);
       i = removeDataListeners.indexOf(removeData);
       if (i >= 0) removeDataListeners.splice(i, 1);
+      for (i = 0; i < n; ++i) filters[i] &= zero;
       m &= zero;
-      return filterAll();
+      return dimension;
     }
 
     return dimension;
@@ -1398,4 +1380,4 @@ function crossfilter_capacity(w) {
       ? 0x10000
       : 0x100000000;
 }
-})(typeof exports !== 'undefined' && exports || this);
+})(this);

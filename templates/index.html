@@ -1,369 +1,258 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>School Donations Dashboard</title>
-    <link rel="stylesheet" href="./static/lib/css//bootstrap.min.css">
-    <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
-    <link rel="stylesheet" href="./static/lib/css/dc.css">
-    <link rel="stylesheet" href="./static/css/custom.css">
-    <link rel="stylesheet" href="./static/lib/css/introjs.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,100,100italic,300,300italic' rel='stylesheet' type='text/css'>
+  <title>Funding Status Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for ('static',
+    filename='lib/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static',
+    filename='lib/css/keen-dashboards.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body class="application">
-
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="./"><b>School Donations</b> Dashboard</a>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <button class="pull-left navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse navHeaderCollapse">
+        <ul class ="nav navbar-nav">
+          <li class ="active"><a href="./"><strong>Funding Status Dashboard</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="reset_all()"><strong>Reset</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="/about_us"><strong>About US</strong></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div  id="outer" class="container-fluid">
+      <div class="row justify-content-end">
+        <!-- Metric 1 -->
+        <div class="col-sm-2">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Number of donations
             </div>
-            <ul class="nav navbar-nav">
-                <li><a id="intro-start" href='javascript:introJs().start();'><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;&nbsp;<b>Chart tour!</b></a></li>
-                <li><a href="/"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;<b>Charts</b></a></li>
-                <li><a href="/detail"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;&nbsp;<b>Data table</b></a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li id="row-selection" class="dc-data-count"><span class="filter-count">_</span> selected out of <span class="total-count">_</span> records</li>
-                <li><a href='javascript:dc.filterAll();dc.redrawAll();' title="Unless you want to apply several filters at the same time, it's recommended to reset filters after each query."><span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;&nbsp;<b>Reset All</b></a></li>
-            </ul>
+            <div class="chart-stage" style="background: #D7A515;
+              position: relative;
+              font-size: 29px;
+              color: white;
+              vertical-align: middle;
+              text-align: center;
+              padding-top: 12px;
+              padding-bottom: 0px;">
+              <div id="number-projects-nd" class="text-size"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Metric 1 -->
+        <!-- Metric 2 -->
+        <div class="col-sm-2">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Total number of donors
+            </div>
+            <div class="chart-stage">
+              <div id="num-donors-nd" class="text-size"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Metric 2 -->
+        <!-- Metric 3 -->
+        <div class="col-sm-2">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Total donations in USD
+            </div>
+            <div class="chart-stage">
+              <div id="total-donations-nd" class="text-size"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Metric 3 -->
+      </div>
+
+      <div class="row justify-content-end">
+        <!-- Metric 4 -->
+        <div class="col-sm-2">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Number of students Reached
+            </div>
+            <div class="chart-stage">
+              <div id="total-students-reached-nd" class="text-size"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Metric 4 -->
+        <!-- menu select -->
+        <div class="col-sm-2">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Selection of Donation State
+            </div>
+            <div class="chart-stage">
+              <div id="menu-select"></div>
+            </div>
+          </div>
+        </div>
+        <!-- menu select -->
+
+      </div>
+
+      <div class="row justify-content-end">
+        <!-- Metric 4 -->
+        <div class="col-sm-8">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Prices excluding optional support
+            </div>
+            <div class="chart-stage">
+              <div id="prices-excluding-optional-support-nd"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-8">
+            <div class="row">
+              <!-- Time Chart
+              <div class="col-sm-12">
+                <div class="chart-wrapper">
+                  <div class="chart-title">
+                    Number of Donations
+                  </div>
+                  <div class="chart-stage">
+                    <div id="time-chart"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Time Chart -->
+
+              <!-- Resources -->
+              <div class="col-sm-6">
+                <div class="chart-wrapper">
+                  <div class="chart-title">
+                    Resources Type
+                  </div>
+                  <div class="chart-stage">
+                    <div id="resource-type-row-chart"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Resources -->
+
+              <!-- funding Pie -->
+              <div class="col-sm-6">
+                <div class="chart-wrapper">
+                  <div class="chart-title">
+                    Funding Status
+                  </div>
+                  <div class="chart-stage">
+                    <div id="funding-chart"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- funding Pie -->
+
+            </div>
         </div>
     </div>
-
-
-<div  id="outer" class="container-fluid">
-    <div class="row">
-        <div id = "map-donations" class="col-sm-6">
-            <div class="chart-wrapper" data-step="1" data-intro="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum." data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations map
-                    </div>
-                    <div class="chart-stage">
-                        <div id="us-chart"></div>
-                        <div id="volume-chart"></div>
-                    </div>
-                </div>
-            </div><!-- #map-donations -->
+    <div class="row justify-content-end">
+      <!-- Poverty -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Poverty Level
+          </div>
+          <div class="chart-stage">
+            <div id="poverty-level-row-chart"></div>
+          </div>
         </div>
-        <div class="col-sm-6">
-            <div class="chart-wrapper" data-step="2" data-intro="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod." data-position="right">
-                <div id = "num-display-donations" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Number of donations
-                        </div>
-                        <div class="chart-stage">
-                            <div id="number-projects-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div><!-- #num-display-donations -->
-                <div id = "num-display-percentage-donations" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Percentage of total donations
-                        </div>
-                        <div class="chart-stage">
-                            <div id="ratio-donations-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div><!-- #num-display-percentage-donations -->
-                <div id="num-display-donations-USD" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Total donations in USD
-                        </div>
-                        <div class="chart-stage">
-                            <div id="total-donations-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div><!-- #num-display-donations-USD -->
-                <div id="num-display-average-donations" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Average donations in USD
-                        </div>
-                        <div class="chart-stage">
-                            <div id="usd-avg-donations-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div><!-- #num-display-average-donations -->
-                <div id = "num-display-students" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Number of students reached
-                        </div>
-                        <div class="chart-stage">
-                            <div id="students-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div><!-- #num-display-students -->
-                <div id= "num-display-average-students" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Average students reached
-                        </div>
-                        <div class="chart-stage">
-                            <div id="avg-students-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div> <!-- #num-display-average-students -->
-                <div id="num-display-donors" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Number of donors
-                        </div>
-                        <div class="chart-stage">
-                            <div id="donors-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div> <!-- #num-display-donors -->
-                <div id="num-display-average-donors" class="col-sm-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Average donors
-                        </div>
-                        <div class="chart-stage">
-                            <div id="avg-donors-nd" class="big-numbers"></div>
-                        </div>
-                    </div>
-                </div><!-- #num-display-average-donors -->
-            </div>
+      </div>
+      <!-- Poverty -->
+      <!-- Teacher Prefix -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Donation by teacher prefix
+          </div>
+          <div class="chart-stage">
+            <div id="teacher-prefix-chart"></div>
+          </div>
         </div>
-        <div id="donations-number-and-USD" class="col-sm-9">
-            <div class="chart-wrapper" data-step="3" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations: Number and USD
-                    </div>
-                    <div class="chart-stage">
-                        <div id="zoom-line-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #donations-number-and-USD -->
-        <div id="funding-status" class="col-sm-3">
-            <div class="chart-wrapper" data-step="4" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by funding status
-                    </div>
-                    <div class="chart-stage">
-                        <div id="funding-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #funding-status -->
-        <div id="stack-lines-prices" class="col-sm-9">
-            <div class="chart-wrapper" data-step="5" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Prices excluding optional support
-                    </div>
-                    <div class="chart-stage">
-                        <div id="stack-lines-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #stack-lines-prices -->
-        <div id="teacher-prefix" class="col-sm-3">
-            <div class="chart-wrapper" data-step="6" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by teacher prefix
-                    </div>
-                    <div class="chart-stage">
-                        <div id="teacher-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #teacher-prefix -->
-        <div id="resources-USD" class="col-sm-3">
-            <div class="chart-wrapper" data-step="7" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations in USD by resources type
-                    </div>
-                    <div class="chart-stage">
-                        <div id="resource-type-row-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #resources-USD -->
-        <div id="poverty-USD" class="col-sm-3">
-            <div class="chart-wrapper" data-step="8" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations in USD by poverty level
-                    </div>
-                    <div class="chart-stage">
-                        <div id="poverty-level-row-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #poverty-USD -->
-        <div id="area-USD" class="col-sm-3">
-            <div class="chart-wrapper" data-step="9" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations in USD by primary focus area
-                    </div>
-                    <div class="chart-stage">
-                        <div id="area-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #area-USD -->
-        <div id="grade-USD" class="col-sm-3">
-            <div class="chart-wrapper" data-step="10" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations in USD by grade level
-                    </div>
-                    <div class="chart-stage">
-                        <div id="usd-grade-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- grade-USD -->
-        <div id="resources-number" class="col-sm-3">
-            <div class="chart-wrapper" data-step="11" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by resource type
-                    </div>
-                    <div class="chart-stage">
-                        <div id="resource-pie-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #resource-number -->
-        <div id="poverty-number" class="col-sm-3">
-            <div class="chart-wrapper" data-step="12" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by poverty level
-                    </div>
-                    <div class="chart-stage">
-                        <div id="poverty-pie-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #poverty-number -->
-        <div id="area-number" class="col-sm-3">
-            <div class="chart-wrapper" data-step="13" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by primary focus area
-                    </div>
-                    <div class="chart-stage">
-                        <div id="area-pie-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #area-number -->
-        <div id="grade-number" class="col-sm-3">
-            <div class="chart-wrapper" data-step="14" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by grade level
-                    </div>
-                    <div class="chart-stage">
-                        <div id="grade-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #grade-number -->
-        <div id="donations-by-state-USD" class="col-sm-9">
-            <div class="chart-wrapper" data-step="15" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations in USD by state
-                    </div>
-                    <div class="chart-stage">
-                        <div id="usd-state-donations-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #donations-by-state-USD -->
-        <div id="donations-by-state-number" class="col-sm-3">
-            <div class="chart-wrapper" data-step="16" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by state
-                    </div>
-                    <div class="chart-stage">
-                        <div id="states-pie-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #donations-by-state-number -->
-        <div id="bubbles" class="col-sm-9">
-            <div class="chart-wrapper" data-step="17" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Students reached - Donations in USD - Primary focus subject
-                    </div>
-                    <div class="chart-stage">
-                        <div id="bubble-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #bubbles -->
-        <div id="metro-number" class="col-sm-3">
-            <div class="chart-wrapper" data-step="18" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Number of donations by metro area
-                    </div>
-                    <div class="chart-stage">
-                        <div id="metro-pie-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #metro-number -->
-        <div id="scatter-plot" class="col-sm-6">
-            <div class="chart-wrapper" data-step="19" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Students reached - Number of donors
-                    </div>
-                    <div class="chart-stage">
-                        <div id="scatter1-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #scater-plot -->
-        <div id="donations-by-month" class="col-sm-6">
-            <div class="chart-wrapper" data-step="20" data-intro=" The description that you want" data-position="right">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Donations in USD by month
-                    </div>
-                    <div class="chart-stage">
-                        <div id="month-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #donations-by-month -->
+      </div>
+      <!-- Teacher Prefix -->
+
     </div>
-</div>
 
+    <div class="row justify-content-end">
+      <!-- Donations by month -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Donations by month
+          </div>
+          <div class="chart-stage">
+            <div id="donations-by-month-bar-chart"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Donations by month -->
+      <!-- Secondary focus area -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Secondary Focus Area
+          </div>
+          <div class="chart-stage">
+            <div id="secondary-focus-area-chart"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Secondary focus area -->
+    </div>
 
-    <hr>
-    <p class="small text-muted"> Data viz - Project 2 for Code Institute</p>
-
-    <script src="./static/lib/js/bootstrap.min.js"></script>
-    <script src="./static/lib/js/jquery.min.js"></script>
-    <script src="./static/lib/js/crossfilter.js"></script>
-    <script src="./static/lib/js/d3.js"></script>
-    <script src="./static/lib/js/dc.js"></script>
-    <script src="./static/lib/js/queue.js"></script>
-    <script src="./static/lib/js/keen.min.js"></script>
-    <script src='./static/js/graph.js' type='text/javascript'></script>
-    <script src="./static/lib/js/intro.js" type="text/javascript"></script>
+    <div class="row justify-content-end">
+      <!-- Primary focus area -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Donations By Primary Focus Area
+          </div>
+          <div class="chart-stage">
+            <div id="primary-focus-area-row-chart"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Primary focus area -->
+    </div>
+    <div style='clear:both;'>
+       <table class="table table-bordered table-hover table-condensed table-striped" id="dc-data-table">
+            <thead>
+                 <tr class="header success">
+                      <th>Funding Status</th>
+                      <th>School State</th>
+                      <th>Resource Type</th>
+                      <th>Poverty level</th>
+                      <th>Total Price Excluding Optional Support</th>
+                      <th>Num Donors</th>
+                 </tr>
+            </thead>
+       </table>
+    </div>
+  </div>
+  <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/script.js')}}"></script>
 </body>
 </html>
