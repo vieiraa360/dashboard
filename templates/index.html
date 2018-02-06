@@ -23,9 +23,15 @@
         <ul class ="nav navbar-nav">
           <li class ="active"><a href="./"><strong>Funding Status Dashboard</strong></a></li>
           <li class="nav-item"><a class="nav-link" href="#" onclick="reset_all()"><strong>Reset</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="javascript:introJs().start();"><strong>Start Tour!</strong></a></li>
+
+          <!--
           <ul class="button-center">
           <button class="intro_button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
         </ul>
+    -->
+
+
         </ul>
       </div>
     </div>
@@ -236,6 +242,9 @@
        </table>
     </div>
   </div>
+  
+  <script>$('ul li a').click(function(){ $('li a').removeClass("active"); $(this).addClass("active"); });</script>
+
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
