@@ -210,7 +210,7 @@ function makeGraphs(error, donorsUSProjects) {
         .renderTitle(true);
 
     resourceTypeChart
-        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .width(300)
         .height(250)
         .dimension(resourceTypeDim)
@@ -218,7 +218,7 @@ function makeGraphs(error, donorsUSProjects) {
         .xAxis().ticks(4);
 
     povertyLevelChart
-        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .width(300)
         .height(250)
         .dimension(povertyLevelDim)
@@ -226,7 +226,7 @@ function makeGraphs(error, donorsUSProjects) {
         .xAxis().ticks(4);
 
     primaryFocusAreaChart
-        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .width(300)
         .height(250)
         .dimension(primaryFocusAreaDim)
@@ -234,7 +234,7 @@ function makeGraphs(error, donorsUSProjects) {
         .xAxis().ticks(6);
 
     fundingStatusChart
-        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .height(220)
         .radius(90)
         .innerRadius(40)
@@ -243,7 +243,7 @@ function makeGraphs(error, donorsUSProjects) {
         .group(numProjectsByFundingStatus);
 
     teacherPrefixChart
-        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#de2cce", "#F5821F"])
+        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#de2cce", "#F5821F"])
         .height(220)
         .radius(90)
         .innerRadius(40)
@@ -252,7 +252,7 @@ function makeGraphs(error, donorsUSProjects) {
         .group(numProjectsByPrefixTeacher);
 
     secondaryFocusAreaChart
-        //.ordinalColors(["#dbde2c", "#66AFB2", "#C96A23", "#D3D1C5", "#df4524"])
+        .ordinalColors(["#dbde2c", "#66AFB2", "#C96A23", "#D3D1C5", "#df4524"])
         .height(220)
         .radius(90)
         .innerRadius(40)
