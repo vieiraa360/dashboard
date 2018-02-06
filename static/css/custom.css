@@ -54,3 +54,16 @@
    padding-bottom: 0px;
 
 }
+
+.button-center{
+position: absolute;
+left: 300px;
+top: 13px;
+}
+.intro_button {
+  border-color: rgb(0, 153, 204);
+  border-radius: 3px;
+  font-family: sans-serif;
+  color: white;
+  background: rgb(0, 153, 204);
+}
