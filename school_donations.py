@@ -22,12 +22,8 @@ def index():
     A Flask view to serve the main dasboard page.
     """
     return render_template("index.html")
+    
 
-
-@app.route('/about_us')
-def about_us():
-    return render_template("about_us.html")
-	
 @app.route("/donorsUS/projects")
 def donor_projects():
     """
@@ -50,8 +46,8 @@ def donor_projects():
         # Define which collection we wish to access
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
-        # and limit the the results to a lower limit of 20000
-        projects = collection.find(projection=FIELDS, limit=15000)
+        # and limit the the results to a lower limit of 30000
+        projects = collection.find(projection=FIELDS, limit=30000)
         # Convert projects to a list in a JSON object and return the JSON data
         return json.dumps(list(projects))
 
