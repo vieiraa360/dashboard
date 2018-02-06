@@ -2,22 +2,13 @@
 <html>
 <head>
   <title>Funding Status Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
   <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <script>
-
-  $(".nav a").on("click", function(){
-    $(".nav").find(".active").removeClass("active");
-    $(this).parent().addClass("active");
-  });
-
-  </script>
-
 
 </head>
 <body class="application">
@@ -251,6 +242,16 @@
        </table>
     </div>
   </div>
+
+  <script>
+
+  $(".nav a").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+  });
+
+  </script>
+
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
