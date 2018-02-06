@@ -2,12 +2,7 @@
    font-size: 20px;
 }
 
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-    color: rgb(61, 67, 76);
-    background-color: rgb(0, 0, 0);
-}
+
 
 .dc-chart g.row text {
    fill: black;
