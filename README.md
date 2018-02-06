@@ -23,7 +23,7 @@ I've used MongoDB for storing data, Python for building a web server that intera
 
 ## PROJECT SOURCE
 Project source can be download from the following link:
-https://github.com/zainshafiq2017/US_State_Campaign.git
+https://github.com/vieiraa360/donations-dashboard.git
 
 ## DONATIONS GRAPHS  (SCREENSHOT)
 ![screenshot 1](static/images/readme1.jpg?raw=true "screenshot 1")
@@ -101,9 +101,6 @@ mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.c
     - div for bind dashboard charts
     - table to show collections related to graphs
 
-**about.html**
- - This page is for campaign advertising to influence the voters to vote us.
-
 **graph.js**
  - queue function is use to asynchronous loading.
  - Added helper function and messages to show errors if there is something wrong.
@@ -123,12 +120,12 @@ mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.c
    - Prices excluding optional support: This line chart show price excluding optional support disaggregated by ranges: >0<300$ >=300$<600$ and >=600$.
      I used "date_posted" for x values and for y values the total of num_donor based on range prices(total_price_excluding_optional_support).
      In this chart we can see also legend and title informations.
-   - Funding status: This pie chart shows the funding status of donations. To get this result I used "funding status" field for 
+   - Funding status: This pie chart shows the funding status of donations. To get this result I used "funding status" field for
      dimension and group functions.
    - Poverty level: In this row chart we can see poverty level. I used "poverty_level" field to extract data and visualized in the
      row chart.
-   - Donation by teacher prefix: It's a pie chart where I've used "teacher_prefix" field for dimension and group functions. 
-   - Donations by month: In this bar chart we can see for every month the total donation in USD. For dimension(x-values) I used 
+   - Donation by teacher prefix: It's a pie chart where I've used "teacher_prefix" field for dimension and group functions.
+   - Donations by month: In this bar chart we can see for every month the total donation in USD. For dimension(x-values) I used
      "d.month" and for y values I've grouped using reducesum function for "total_donations" field.
    - Secondary focus area: Another pie chart where for dimension and group I use "secondary_focus_area" field to see donations for
      every secondary area.
