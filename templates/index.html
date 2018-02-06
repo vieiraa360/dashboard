@@ -10,6 +10,17 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
   <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <script>
+
+  $(".nav a").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+  });
+
+  </script>
+
+
 </head>
 <body class="application">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -21,7 +32,7 @@
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class ="nav navbar-nav">
-          <li class ="active"><a href="./"><strong>Dashboard</strong></a></li>
+          <li class ="nav-item"><a href="./"><strong>Dashboard</strong></a></li>
           <li class="nav-item"><a class="nav-link" href="#" onclick="reset_all()"><strong>Reset</strong></a></li>
           <li class="nav-item"><a class="nav-link" href="#" onclick="javascript:introJs().start();"><strong>Start Tour!</strong></a></li>
 
