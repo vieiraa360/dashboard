@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body class="application">
+<body class="application" data-spy="spyscroll" data-target=".navbar-default">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <button class="pull-left navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -242,9 +242,6 @@
        </table>
     </div>
   </div>
-  
-  <script>$('ul li a').click(function(){ $('li a').removeClass("active"); $(this).addClass("active"); });</script>
-
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
