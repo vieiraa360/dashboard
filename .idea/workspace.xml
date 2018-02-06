@@ -23,7 +23,243 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec6a6678-ca5a-42a9-b370-9f9ca44715ea" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/school_donations.py" afterPath="$PROJECT_DIR$/school_donations.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/static/js/script.js" afterPath="$PROJECT_DIR$/static/js/reset.js" />
+      <change beforePath="$PROJECT_DIR$/static/lib/css/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/css/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/.spmignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/BUILD/BUILD.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/CODE_OF_CONDUCT.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/CONTRIBUTING.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/Makefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/bower.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/changelog.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/component.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_config.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_includes/footer.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_includes/head.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_includes/header.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_includes/sidebar.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_includes/utils.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_layouts/default.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_layouts/doc.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/_layouts/landing.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/css/custom.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/css/kissui.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/css/sticky.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/developers/build.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/developers/release-history.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/extra/book.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/extra/help.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/getting-started/examples.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/getting-started/install.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/getting-started/quick-start.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/getting-started/welcome.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/hints/api.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/hints/attributes.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/hints/options.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/intro/api.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/intro/attributes.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/intro/options.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/themes/themes.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/themes/using-themes.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/angularjs.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/dart.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/drupal.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/ember.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/gwt.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/r.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/rails.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/wordpress.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/docs/wrappers/yii-framework.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/feed.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/images/logo.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/images/mini-logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/js/contents.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/js/doc42.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/docs/js/sticky.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/RTL/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/assets/css/bootstrap-responsive.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/assets/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/assets/css/demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/assets/img/glyphicons-halflings-white.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/assets/img/glyphicons-halflings.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/auto-position/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/css/agency.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/css/agency.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/gulpfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/about/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/about/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/about/3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/about/4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/header-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/logos/aetuts.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/logos/creative-market.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/logos/designmodo.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/logos/envato.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/logos/microlancer.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/logos/themeforest.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/logos/wordpress.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/map-image.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/dreams-preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/dreams.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/escape-preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/escape.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/golden-preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/golden.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/roundicons-free.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/roundicons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/startup-framework-preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/startup-framework.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/treehouse-preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/portfolio/treehouse.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/team/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/team/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/img/team/3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/js/agency.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/js/agency.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/js/contact_me.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/js/jqBootstrapValidation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/less/agency.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/less/mixins.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/mail/contact_me.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/scss/agency.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/animated.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/bordered-pulled.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/core.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/fixed-width.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/font-awesome.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/icons.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/larger.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/mixins.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/path.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/rotated-flipped.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/screen-reader.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/stacked.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_animated.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_core.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_fixed-width.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_icons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_larger.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_list.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_path.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_screen-reader.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_stacked.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/jquery/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/bootstrap/v3/vendor/jquery/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/callbacks/onbeforechange.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/custom-class/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/disable-interaction/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/disable-interaction/programmatic.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/AB_Controls_Sticker_Book.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/AB_Controls_Title.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config1.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config10.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config2.1.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config2.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config3.1.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config3.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config6.1.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config6.2.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config6.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config8.1.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config8.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/configs/config9.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/data/Control_Treatment_Pairs.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/data/Store_List.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/data/Weekly_Store_Traffic.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/line.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/line2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/line3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/line4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/line5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool10.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool11.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool12.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool13.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool14.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool15.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool16.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool7.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool8.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/img/tools/tool9.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/resources/step.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/dynamic-start/resources/step.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/hello-world/exit-confirm.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/hello-world/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/hello-world/positions.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/hello-world/withProgress.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/hello-world/withoutBullets.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/hello-world/withoutButtons.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/hint/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/html-tooltip/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/multi-page/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/multi-page/second.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/programmatic/hint.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/programmatic/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/svg/d3.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/example/withoutElement/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/intro.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/introjs-rtl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/introjs.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/license.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/minified/intro.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/minified/introjs-rtl.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/minified/introjs.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/themes/introjs-dark.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/themes/introjs-flattener.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/themes/introjs-modern.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/themes/introjs-nassim.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/themes/introjs-nazanin.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/themes/introjs-royal.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/lib/intro.js/yarn.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/templates/about_us.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,42 +270,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1407">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file leaf-file-name="reset.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/reset.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="school_donations.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/school_donations.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crossfilter.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/lib/js/crossfilter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-189">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -79,43 +283,19 @@
       <file leaf-file-name="graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5746">
+            <state relative-caret-position="-4221">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/script.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="680">
+              <caret line="254" column="50" lean-forward="false" selection-start-line="254" selection-start-column="50" selection-end-line="254" selection-end-column="50" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/lib/js/bootstrap.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="5" column="31650" lean-forward="false" selection-start-line="5" selection-start-column="31650" selection-end-line="5" selection-end-column="31650" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/lib/js/jquery.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1827">
-              <caret line="3" column="20225" lean-forward="false" selection-start-line="3" selection-start-column="20225" selection-end-line="3" selection-end-column="20225" />
-              <folding>
-                <marker date="1517844513390" expanded="true" signature="0:12" ph="/*...*/" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -150,9 +330,9 @@
         <option value="$PROJECT_DIR$/static/lib/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/static/lib/js/jquery.min.js" />
         <option value="$PROJECT_DIR$/static/lib/css/fonts/glyphicons-halflings-regular.ttf" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/geojson/us-states.json" />
         <option value="$PROJECT_DIR$/school_donations.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -186,17 +366,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="dashboard" type="cbb8eebc:String" user="dashboard" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="dashboard" type="cbb8eebc:String" user="dashboard" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
@@ -226,6 +403,13 @@
               <item name="dashboard" type="cbb8eebc:String" user="dashboard" />
               <item name="static" type="cbb8eebc:String" user="static" />
               <item name="lib" type="cbb8eebc:String" user="lib" />
+              <item name="css" type="cbb8eebc:String" user="css" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="dashboard" type="cbb8eebc:String" user="dashboard" />
+              <item name="static" type="cbb8eebc:String" user="static" />
+              <item name="lib" type="cbb8eebc:String" user="lib" />
               <item name="js" type="cbb8eebc:String" user="js" />
             </path>
             <path>
@@ -237,8 +421,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,11 +509,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/about_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2499">
           <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -339,9 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="6" column="4734" lean-forward="false" selection-start-line="6" selection-start-column="4734" selection-end-line="6" selection-end-column="4734" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -367,7 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2499">
           <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -398,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
           <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -420,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -435,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -450,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -458,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -478,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1407">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -486,16 +665,6 @@
     <entry file="file://$PROJECT_DIR$/static/js/crossfilter.js" />
     <entry file="file://$PROJECT_DIR$/static/css/dc.css" />
     <entry file="file://$PROJECT_DIR$/static/css/kenn-dashboards.css" />
-    <entry file="file://$PROJECT_DIR$/static/lib/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="5" column="31650" lean-forward="false" selection-start-line="5" selection-start-column="31650" selection-end-line="5" selection-end-column="31650" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/lib/css/fonts/glyphicons-halflings-regular.ttf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -503,48 +672,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/lib/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="3" column="20225" lean-forward="false" selection-start-line="3" selection-start-column="20225" selection-end-line="3" selection-end-column="20225" />
-          <folding>
-            <marker date="1517844513390" expanded="true" signature="0:12" ph="/*...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/geojson/us-states.json" />
-    <entry file="file://$PROJECT_DIR$/static/js/graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5746">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/school_donations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
           <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,6 +684,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-189">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/lib/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="5" column="31650" lean-forward="false" selection-start-line="5" selection-start-column="31650" selection-end-line="5" selection-end-column="31650" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/lib/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="3" column="20225" lean-forward="false" selection-start-line="3" selection-start-column="20225" selection-end-line="3" selection-end-column="20225" />
+          <folding>
+            <marker date="1517844513390" expanded="true" signature="0:12" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/about_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/reset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4221">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="254" column="50" lean-forward="false" selection-start-line="254" selection-start-column="50" selection-end-line="254" selection-end-column="50" />
           <folding />
         </state>
       </provider>
