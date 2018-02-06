@@ -3,12 +3,12 @@
 }
 
 .navbar-default .navbar-nav > .active{
-    background: rgb(61, 67, 76);
+    background: rgb(0, 0, 0);
 }
 .navbar navbar-inverse .navbar-nav > .active > a,
 .navbar navbar-inverse .navbar-nav > .active > a:hover,
 .navbar navbar-inverse .navbar-nav > .active > a:focus {
-    background: rgb(0, 0, 0);
+    background: rgb(61, 67, 76);
 }
 
 .dc-chart g.row text {
