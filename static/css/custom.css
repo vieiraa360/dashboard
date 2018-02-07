@@ -22,17 +22,14 @@ body {
     padding-bottom: 15px;
 }
 
-.navbar-btn{
+#reset-btn{
     float:right;
-    margin:10px;
  }
 
-.navbar-header img {
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
-    margin-right: 20px;
-}
+#start-btn{
+    float:right;
+ }
+
 
 /* navbar end */
 
@@ -86,17 +83,4 @@ body {
    padding-top: 4px;
    padding-bottom: 0px;
 
-}
-
-.button-center{
-position: absolute;
-left: 300px;
-top: 13px;
-}
-.intro_button {
-  border-color: rgb(0, 0, 0);
-  border-radius: 3px;
-  font-family: sans-serif;
-  color: white;
-  background: rgb(0, 0, 0);
 }
