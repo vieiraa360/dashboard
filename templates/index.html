@@ -25,9 +25,10 @@
           <li class ="navbar-brand"><a class="nav-link" href="./"><strong>Dashboard</strong></a></li>
 
 
-
-              <p><button class="btn btn-primary navbar-btn" onclick="javascript:introJs().start();">Guide</button></p>
-            <p><button class="btn btn-primary navbar-btn" onclick="reset_all()">Reset All</button></p>
+          <ul class="navbar-btn">
+              <p><button class="btn btn-primary navbar-btn" onclick="javascript:introJs().start();">Guide</button>
+            <p><button class="btn btn-primary reset navbar-btn" onclick="reset_all()">Reset All</button></p>
+        </ul>
 
 
               <!--<li class="nav-item"><a class="nav-link" href="#" onclick="reset_all()"><strong>Reset</strong></a></li>
@@ -240,7 +241,6 @@
                       <th>Num Donors</th>
                  </tr>
             </thead>
-            <div id="dc-data-table" data-step="8" data-intro="table" style="font-weight: normal" data-position="right"></div>
        </table>
     </div>
   </div>
