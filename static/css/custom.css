@@ -16,11 +16,12 @@
     font-size: 35px;
 }
 
-/*
+
 .navbar .navbar-header .navbar-brand {
     padding-top: 5px;
+    padding-bottom: 5px;
 }
-*/
+
 
 .navbar-header img {
     height: 50px;
