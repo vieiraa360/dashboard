@@ -22,11 +22,9 @@ body {
     padding-bottom: 15px;
 }
 
-#reset-btn{
-    float:right;
- }
 
-#start-btn{
+
+.navbar-btn{
     float:right;
  }
 
