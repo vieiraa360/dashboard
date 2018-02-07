@@ -14,13 +14,10 @@
 .navbar-inverse .navbar-brand {
     font-family: "Oswald", Helvetica, Arial, sans-serif;
     font-size: 35px;
-}
-
-
-.navbar .navbar-header .navbar-brand {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
 
 
 .navbar-header img {
