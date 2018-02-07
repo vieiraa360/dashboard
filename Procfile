@@ -1,1 +1,1 @@
-web: gunicorn school_donations:app
+web: gunicorn dashboard:app
