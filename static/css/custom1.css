@@ -1,0 +1,182 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#number-projects-nd {
+    font-size: 50px;
+}
+
+#total-donations-nd {
+    font-size: 50px;
+}
+
+#number-schools-nd {
+    font-size: 50px;
+}
+
+#projects-container {
+    padding-left: 0;
+}
+
+#schools-container {
+    padding-left: 0;
+}
+
+.dc-chart g.row text {
+    fill: black;
+    font-size: 12px;
+}
+
+#state-choropleth g path {
+    stroke: #666666;
+    stroke-width: 0.1%;
+}
+
+.dc-chart .pie-slice {
+    font-size: 14px;
+}
+
+.dc-chart .pie-slice path {
+    stroke: white;
+    stroke-width: 1px;
+}
+
+.dc-select-menu {
+    background: #dddddd;
+    width: 200px;
+    border: 1px solid black;
+    position: relative;
+    height: 35px;
+    font-size: 16px;
+    color: #333333;
+    vertical-align: middle;
+    text-align: left;
+    padding-top: 4px;
+    padding-bottom: 0;
+}
+
+.row {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.reset {
+    float: right;
+}
+
+#nav-menu button{
+    margin-left: 8px;
+}
+
+#navbar-brand-states-combined{
+    color: white;
+}
+
+#loading-data {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    padding-top: 50px;
+    background-color: #3d4a57;
+    color: white;
+    text-align: center;
+}
+
+#loading-data img {
+    margin: 20px;
+}
+
+#state-choropleth {
+        pointer-events: auto;
+}
+
+/* Bootstrap md breakpoint */
+@media screen and (max-width: 992px) {
+    #navbar-brand-states-combined{
+        font-size: 16px;
+    }
+
+}
+
+/* Bootstrap sm breakpoint */
+@media screen and (max-width: 768px) {
+    #projects-container {
+        padding-left: 12px;
+        padding-right: 6px;
+    }
+
+    #schools-container {
+        padding-left: 6px;
+        padding-right: 12px;
+    }
+
+    .navbar-nav {
+        margin: 0;
+    }
+
+    /* Too small to be interactive on small screens - use menu instead */
+    #state-choropleth {
+        pointer-events: none;
+    }
+
+    #keen-padding-overide {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    #donation-value-line-chart .x.axis text {
+        text-anchor: end !important;
+        transform: rotate(-30deg);
+        font-size: 7px;
+    }
+
+    #time-select-chart .x.axis text {
+        text-anchor: end !important;
+        transform: rotate(-30deg);
+        font-size: 7px;
+    }
+
+}
+
+/* Bootstrap xs */
+@media screen and (max-width : 480px) {
+    #number-projects-nd {
+    font-size: 44px;
+    }
+
+    #number-schools-nd {
+    font-size: 44px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width : 360px) {
+    #navbar-brand-states-combined {
+        font-size: 12px;
+    }
+
+    #total-donations-nd {
+    font-size: 44px;
+    }
+
+    #number-projects-nd {
+    font-size: 36px;
+    }
+
+    #number-schools-nd {
+    font-size: 36px;
+    }
+
+    #schools-container .chart-title{
+        font-size: 11px;
+    }
+
+    #projects-container .chart-title{
+        font-size: 11px;
+    }
+
+}
