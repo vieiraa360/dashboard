@@ -1,248 +1,235 @@
 <!DOCTYPE html>
-<html lang="en-GB" xmlns="http://www.w3.org/1999/html">
-
+<html>
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>School Donations Dashboard</title>
-    <link rel="stylesheet" href="../static/lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/lib/css/keen-dashboards.css">
-    <link rel="stylesheet" href="../static/lib/css/dc.css">
-    <link rel="stylesheet" href="../static/css/custom1.css">
-    <link rel="stylesheet" href="../static/lib/css/introjs.css"/>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="icon" href="../favicon.ico">
+  <title>Funding Status Dashboard</title>
+
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+  <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Oswald|Roboto|Slabo+27px" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 </head>
-
-<body class="application" id="keen-padding-overide">
-
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu"
-                    aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="navbar-brand" id="navbar-brand-states-combined">
-                School Donations
-                <span class="hidden-md hidden-lg">:&nbsp;</span>
-                <span class="hidden-xs hidden-sm">Dashboard&nbsp;&nbsp;-&nbsp;&nbsp;Showing:&nbsp;&nbsp;</span>
-                <span id="stateFilter">All states</span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="nav-menu">
-            <p class="navbar-nav pull-right">
-                <a href="https://github.com/">
-                    <img src="../static/images/Light-32px.png" alt="Github" width="32" height="32"/>
-                </a>
-                <button class="intro_button btn btn-primary navbar-btn" type="button" autofocus
-                        onclick="javascript:startGuide();">Guide
-                </button>
-                <button class="btn btn-primary reset navbar-btn"
-                        onclick="javascript:dc.filterAll();dc.renderAll();">Reset All
-                </button>
-            </p>
-        </div>
+<body class="application">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+     <button class="pull-left navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <div class="collapse navbar-collapse navHeaderCollapse">
+        <ul class ="nav navbar-nav">
+          <li class ="navbar-brand"><a class="nav-link" href="./"><strong>Dashboard</strong></a></li>
+             <li class="nav-item"><a class="nav-link" href="#" onclick="javascript:introJs().start();"><strong>Guide</strong></a></li>
+              <li class="nav-item"><a class="nav-link" href="#" onclick="reset_all()"><strong>Reset</strong></a></li>
+        </ul>
+      </div>
     </div>
-</div>
+  </nav>
+  <div  id="outer" class="container-fluid">
 
-<!--<div id="loading-data">
-    <h2>School Donations Dashboard</h2>
-    <img src="../static/images/spinner64.gif" alt="Spinner" width="64" height="64">
-    <h3>Loading data (approx. 14MB)</h3>
-</div>-->
-
-<div id="outer" class="container">
-
-    <div class="row">
-        <!-- menu select -->
-        <div class="col-sm-12 hidden-sm hidden-md hidden-lg">
-            <div class="chart-wrapper" id="tourStep1">
+      <div class="row justify-content-end">
+        <!-- Metric 1 -->
+            <div class="col-sm-2">
+             <div class="chart-wrapper">
                 <div class="chart-title">
-                    Donation State
+                  Number of donations
                 </div>
-                <div class="chart-stage">
-                    <div id="menu-select"></div>
+                    <div class="chart-stage" style="background: rgb(0, 153, 204);
+                      position: relative;
+                      font-size: 29px;
+                      color: white;
+                      vertical-align: middle;
+                      text-align: center;
+                      padding-top: 12px;
+                      padding-bottom: 0px;">
+                      <div id="number-projects-nd" class="text-size"></div>
+                  </div>
+             </div>
+
+
+
+                <!-- Metric 2 -->
+                <div class="col-sm-2">
+                  <div class="chart-wrapper">
+                    <div class="chart-title">
+                      Total number of donors
+                    </div>
+                    <div class="chart-stage">
+                        <div id="num-donors-nd" class="text-size"></div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
+
+
+                <!-- Metric 3 -->
+                <div class="col-sm-2">
+                  <div class="chart-wrapper">
+                    <div class="chart-title">
+                      Total donations in USD
+                    </div>
+                    <div class="chart-stage">
+                        <div id="total-donations-nd" class="text-size"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Metric 3 -->
+
+
+                <!-- Metric 4 -->
+                <div class="col-sm-2">
+                  <div class="chart-wrapper">
+                    <div class="chart-title">
+                      Number of students Reached
+                    </div>
+                    <div class="chart-stage">
+                        <div id="total-students-reached-nd" class="text-size"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- menu select -->
+                <div class="col-sm-2">
+                  <div class="chart-wrapper">
+                    <div class="chart-title">
+                      Selection of Donation State
+                    </div>
+                    <div class="chart-stage">
+                         <div id="menu-select"></div>
+                    </div>
+                  </div>
+                  <div id="figures" data-step="1" data-intro="Headline figures" style="font-weight: normal" data-position="right"></div>
+                </div>
+    </div>
+
+
         <!-- menu select -->
+
+
+      <div class="row justify-content-end">
+        <!-- Metric 4 -->
+        <div class="col-sm-10">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Prices excluding optional support
+            </div>
+            <div class="chart-stage">
+              <div id="prices-excluding-optional-support-nd" data-step="2" data-intro="Prices excluding optional support" style="font-weight: normal" data-position="right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+   <div class="row justify-content-end">
+
+           <!-- funding Pie -->
+           <div class="col-sm-4">
+             <div class="chart-wrapper">
+               <div class="chart-title">
+                 Funding Status
+               </div>
+               <div class="chart-stage">
+                 <div id="funding-chart" data-step="3" data-intro="Funding Status" style="font-weight: normal" data-position="right"></div>
+               </div>
+             </div>
+           </div>
+           <!-- funding Pie -->
+
+              <!-- Resources -->
+              <div class="col-sm-4">
+                <div class="chart-wrapper">
+                  <div class="chart-title">
+                    Resources Type
+                  </div>
+                  <div class="chart-stage">
+                     <div id="resource-type-row-chart" data-step="4" data-intro="Resources Type" style="font-weight: normal" data-position="right"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Resources -->
+
+              <!-- Poverty -->
+              <div class="col-sm-4">
+                <div class="chart-wrapper">
+                  <div class="chart-title">
+                    Poverty Level
+                  </div>
+                  <div class="chart-stage">
+                    <div id="poverty-level-row-chart" data-step="5" data-intro="Poverty Level" style="font-weight: normal" data-position="right"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Poverty -->
     </div>
 
-    <div class="row">
-
-        <div class="col-lg-8 col-xs-12">
-            <div class="row" id="tourStep2">
-
-                <!-- Metric 2 -->
-                <div class="col-sm-6 col-xs-12">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Money Raised (USD)
-                        </div>
-                        <div class="chart-stage">
-                            <div id="total-donations-nd"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Metric 2 -->
-
-                <!-- Metric 1 -->
-                <div class="col-sm-3 col-xs-6" id="projects-container">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Number of Projects
-                        </div>
-                        <div class="chart-stage">
-                            <div id="number-projects-nd"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Metric 1 -->
-
-                <!-- Metric 3 -->
-                <div class="col-sm-3 col-xs-6" id="schools-container">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            Schools Reached
-                        </div>
-                        <div class="chart-stage">
-                            <div id="number-schools-nd"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Metric 3 -->
 
 
-            </div>
-
-            <div class="row">
-                <!-- Choropleth -->
-                <div class="col-lg-12">
-                <!--div class="col-lg-12 hidden-xs"-->
-                    <div class="chart-wrapper" id="tourStep3">
-                        <div class="chart-title">
-                            Distribution by State (colour: total US dollars raised).
-                            <a class="reset hidden-xs" href="javascript:stateChoropleth.filterAll();dc.redrawAll();">
-                                reset</a>
-                        </div>
-                        <div class="chart-stage">
-                            <div id="state-choropleth"></div>
-                        </div>
-                        <div class="hidden-sm hidden-md hidden-lg chart-notes">
-                            <p>&nbsp;Map is interactive on wider screens.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Choropleth -->
-            </div>
-
-            <div class="row">
-                <!-- Combined donation / projects by time charts -->
-                <div class="col-lg-12">
-                    <div class="chart-wrapper" id="tourStep4">
-                        <div class="chart-title">
-                            Donations (USD) and Projects by Date
-                            <a class="reset" href="javascript:timeSelectChart.filterAll();dc.redrawAll();">reset</a>
-                        </div>
-                        <div class="chart-stage">
-                            <div id="donation-value-line-chart"></div>
-                        </div>
-                        <div class="chart-stage">
-                            <div id="time-select-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Combined donation / projects by time charts -->
-            </div>
-
+    <div class="row justify-content-end">
+      <!-- Donations by month -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Donations by month
+          </div>
+          <div class="chart-stage">
+            <div id="donations-by-month-bar-chart" data-step="6" data-intro="Donations by month" style="font-weight: normal" data-position="right"></div>
+          </div>
         </div>
+      </div>
+      <!-- Donations by month -->
 
-        <div class="col-lg-4 col-xs-12">
-
-            <div class="row">
-
-                <!-- Resources -->
-                <div class="col-sm-6 col-lg-12">
-                    <div class="chart-wrapper" id="tourStep5">
-                        <div class="chart-title">
-                            Projects by Resource Type
-                            <a class="reset" href="javascript:resourceTypeChart.filterAll();dc.redrawAll();">reset</a>
-                        </div>
-                        <div class="chart-stage">
-                            <div id="resource-type-row-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Resources -->
-
-                <!-- Primary focus area -->
-                <div class="col-sm-6 col-lg-12">
-                    <div class="chart-wrapper" id="tourStep6">
-                        <div class="chart-title">
-                            Projects by Primary Focus Area
-                            <a class="reset"
-                               href="javascript:primaryFocusAreaChart.filterAll();dc.redrawAll();">reset</a>
-                        </div>
-                        <div class="chart-stage">
-                            <div id="primary-focus-area-row-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Primary focus area -->
-
-                <!-- Poverty -->
-                <div class="col-sm-6 col-lg-12">
-                    <div class="chart-wrapper" id="tourStep7">
-                        <div class="chart-title">
-                            Projects by Poverty Level
-                            <a class="reset" href="javascript:povertyLevelChart.filterAll();dc.redrawAll();">reset</a>
-                        </div>
-                        <div class="chart-stage">
-                            <div id="poverty-level-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Poverty -->
-
-                <!-- Grade level -->
-                <div class="col-sm-6 col-lg-12">
-                    <div class="chart-wrapper" id="tourStep8">
-                        <div class="chart-title">
-                            Projects by Grade Level
-                            <a class="reset" href="javascript:gradeLevelChart.filterAll();dc.redrawAll();">reset</a>
-                        </div>
-                        <div class="chart-stage">
-                            <div id="grade-level-row-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Grade level -->
-
-            </div>
+      <!-- Primary focus area -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Donations By Primary Focus Area
+          </div>
+          <div class="chart-stage">
+            <div id="primary-focus-area-row-chart" data-step="7" data-intro="Donations By Primary Focus Area" style="font-weight: normal" data-position="right"></div>
+          </div>
         </div>
-    </div>
+      </div>
+      <!-- Primary focus area -->
 
-    <div class="row">
-        <hr> <!-- hr - horizontal rule - defines a thematic break -->
-        <p class="small text-muted">Data visualisation by
-            <a href="https://jamcoy.com">jamcoy</a>
-        </p>
+      <!-- Secondary focus area -->
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Secondary Focus Area
+          </div>
+          <div class="chart-stage">
+            <div id="secondary-focus-area-chart" data-step="8" data-intro="Secondary Focus Area" style="font-weight: normal" data-position="right"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Secondary focus area -->
+
     </div>
 
 </div>
 
-<script src="../static/lib/js/jquery.min.js"></script>
-<script src="../static/lib/js/bootstrap.min.js"></script>
-<script src="../static/lib/js/crossfilter.js"></script>
-<script src="../static/lib/js/d3.js"></script>
-<script src="../static/lib/js/dc.js"></script>
-<script src="../static/lib/js/queue.js"></script>
-<script src="../static/lib/js/keen.min.js"></script>
-<script src="../static/lib/js/intro.js" type="text/javascript"></script>
-<script src='../static/js/graph1.js' type='text/javascript'></script>
-<script src='../static/js/guide.js' type='text/javascript'></script>
+
+<div class="row">
+    <hr> <!-- hr - horizontal rule - defines a thematic break -->
+    <p class="small text-muted">Data visualisation by
+        <a href="#">Helder Vieira</a>
+    </p>
+</div>
+  <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/reset.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>
 </body>
 </html>
