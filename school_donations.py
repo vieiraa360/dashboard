@@ -19,17 +19,17 @@ COLLECTION_NAME = 'projects'
 def index():
     return render_template("index.html")
 
+@app.route("/data/us_states")
+def send_json():
+    return send_from_directory('./static/data', 'US_states.json')
 
 @app.route("/donorsUS/projects")
 def donor_projects():
 
     # Fields to retrieve.
-    FIELDS = {
-        '_id': False, 'funding_status': True, 'school_state': True, 'secondary_focus_area': True,
-        'resource_type': True, 'poverty_level': True, 'total_price_excluding_optional_support': True,
-        'primary_focus_subject': True, 'teacher_prefix': True, 'primary_focus_area': True,
-        'date_posted': True, 'num_donors': True, 'students_reached': True, 'total_donations': True
-    }
+    FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
+          'date_posted': True, 'primary_focus_area': True, 'grade_level': True, 'total_donations': True,
+          '_id': False, 'school_ncesid': True}
 
     # Open a connection to MongoDB and retrieveave data set
     with MongoClient(MONGO_URI) as conn:
