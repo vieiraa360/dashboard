@@ -262,7 +262,7 @@ function makeGraphs(error, donorsUSProjects) {
 
     donationsMonthBarChart
         .width(650)
-        .height(200)
+        .height(220)
         .margins({top: 10, right: 50, bottom: 30, left: 70})
         .dimension(monthDim)
         .group(totalDonationsByMonth)
