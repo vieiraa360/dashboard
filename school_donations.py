@@ -35,7 +35,7 @@ def donor_projects():
     # Open a connection to MongoDB and retrieveave data set
     with MongoClient(MONGO_URI) as conn:
         collection = conn[DBS_NAME][COLLECTION_NAME]
-        projects = collection.find(projection=FIELDS, limit=55000)
+        projects = collection.find(projection=FIELDS, limit=30000)
         return json.dumps(list(projects))
 
 

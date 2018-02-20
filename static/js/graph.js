@@ -7,18 +7,9 @@ function makeGraphs(error, donorsUSProjects) {
         console.error("makeGraphs error:", error.statusText);
         throw error;
     }
-    // Helper function
-    /*function print_filter(filter){
-        var f = eval(filter);
-        if (typeof(f.length) != "undefined") {}else{}
-        if (typeof(f.top) != "undefined") {f=f.top(Infinity);}else{}
-        if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
-        console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
-    }*/
-    //console.log(donorsUSProjects);
 
 
-    //Clean donorsUSProjects data
+    //Clean Projects data
     var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
     donorsUSProjects.forEach(function (d) {
         d["date_posted"] = dateFormat.parse(d["date_posted"]);
@@ -130,7 +121,6 @@ function makeGraphs(error, donorsUSProjects) {
     var maxDate = dateDim.top(1)[0]["date_posted"];
 
     //Charts
-    //var timeChart = dc.lineChart("#time-chart");
     var totalPriceExcludingOptionalChart = dc.lineChart("#prices-excluding-optional-support-nd");
     var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
     var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
@@ -185,7 +175,7 @@ function makeGraphs(error, donorsUSProjects) {
 
     // This chart shows price excluding optional support
     totalPriceExcludingOptionalChart
-        //.ordinalColors(["#66AFB2"])
+
         .width(1200)
         .height(300)
         .margins({top: 30, right: 50, bottom: 30, left: 50})
