@@ -48,7 +48,7 @@ For this project MongoDB database as a service was used, MongoDB is an open sour
 
 ## PROJECT SOURCE
 Project source can be found, forked, cloned or download from the following link:  
-https://github.com/vieiraa360/donations-dashboard.git
+https://github.com/vieiraa360/dashboard.git
 
 
 ## DONATIONS DASHBOARD  (SCREENSHOT)
