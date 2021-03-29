@@ -19,7 +19,7 @@ This project also makes use of dc, d3 and crossfilter to render the data visuali
 
 
 ## PROJECT OBJECTIVE
-This project'S objective is to use Crossfilter, d3.js and dc.js javascript libraries as well as a database such as MongoDB to create interactive data visualization using charts and graphs and Python's Flask micro-framework to bring it all together in a webapp format hosted by Heroku.
+This project'S objective is to use Crossfilter, d3.js and dc.js javascript libraries as well as a database such as MongoDB and to create interactive data visualization using charts and graphs and Python's Flask micro-framework to bring it all together in a webapp format hosted by Heroku.
  
 
 ## TECHNOLOGIES USED
